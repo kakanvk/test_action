@@ -20,4 +20,6 @@ jobs:
         run: make
 
       - name: Run unit tests
-        run: ./test_prime
+        run: |
+          ./test_prime
+          ./script.sh

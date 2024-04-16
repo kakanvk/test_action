@@ -14,5 +14,8 @@ src/prime.o: src/prime.c src/prime.h
 test/test_prime.o: test/test_prime.c src/prime.h
 	$(CC) $(CFLAGS) -c $< -o $@ -Isrc
 
+count_tests:
+	test/script.sh
+
 clean:
 	rm -rf test_prime src/*.o test/*.o
