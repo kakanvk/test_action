@@ -6,13 +6,13 @@ CFLAGS = -Wall -Wextra -Werror
 all: test_prime
 
 test_prime: src/prime.o test/test_prime.o
-    $(CC) $(CFLAGS) $^ -o $@
+	$(CC) $(CFLAGS) $^ -o $@
 
 src/prime.o: src/prime.c src/prime.h
-    $(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 test/test_prime.o: test/test_prime.c src/prime.h
-    $(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-    rm -rf test_prime src/*.o test/*.o
+	rm -rf test_prime src/*.o test/*.o
