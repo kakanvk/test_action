@@ -12,7 +12,7 @@ src/prime.o: src/prime.c src/prime.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 test/test_prime.o: test/test_prime.c src/prime.h
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@ -Isrc
 
 clean:
 	rm -rf test_prime src/*.o test/*.o
