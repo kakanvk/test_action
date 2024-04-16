@@ -1,0 +1,23 @@
+name: Build and Test C Project
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install build-essential
+        run: sudo apt-get install build-essential -y
+
+      - name: Compile C code
+        run: make
+
+      - name: Run unit tests
+        run: ./test_prime
