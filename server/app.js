@@ -1,17 +1,14 @@
-// Import dependencies
-const express = require('express');
+// Kiểm tra xem một số có phải là số nguyên tố không
+const isPrime = (number) => {
+    if (number <= 1) {
+        return false;
+    }
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) {
+            return false;
+        }
+    }
+    return true;
+};
 
-// Create an Express application
-const app = express();
-
-// Define a route
-app.get('/', (req, res) => {
-    res.send('Hello, world!');
-});
-
-// Start the server
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-    console.log("Hello world by Github Action!");
-    console.log(`Server is running on port ${port}`);
-});
+export default isPrime;
