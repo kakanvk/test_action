@@ -22,4 +22,4 @@ jobs:
       - name: Run unit tests
         run: |
           ./test_prime
-          ./script.sh
+          ./test/script.sh
