@@ -7,7 +7,7 @@ javac "$PWD/src/Main.java"
 output=$(java -cp "$PWD/src" Main)
 
 # Compare the output with expected output
-if [[ "$output" == "Expected output" ]]; then
+if [[ "$output" == *"Hello, world!"* ]]; then
   echo "Pass"
 else
   echo "Fail"
