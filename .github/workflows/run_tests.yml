@@ -16,8 +16,8 @@ jobs:
       - name: Checkout test cases
         uses: actions/checkout@v2
         with:
-          repository: owner/testcases
-          path: testcases
+          repository: kakanvk/testcases
+          ref: main
 
       - name: Set up Java
         uses: actions/setup-java@v1
