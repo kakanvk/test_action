@@ -13,6 +13,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Checkout test cases
+        uses: actions/checkout@v2
+        with:
+          repository: owner/testcases
+          path: testcases
+
       - name: Set up Java
         uses: actions/setup-java@v1
         with:
@@ -21,4 +27,5 @@ jobs:
       - name: Compile and run tests
         run: |
           javac src/*.java
-          java -cp src PrimeCheckerTest
+          javac -cp src:testcases testcases/*.java
+          java -cp src:testcases PrimeCheckerTest
