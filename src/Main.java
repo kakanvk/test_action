@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        getHelloMessage();
+        System.out.println(getHelloMessage());
     }
 
-    public static void getHelloMessage() {
-        System.out.println("Hello, world!");
+    public static String getHelloMessage() {
+        return "Hello, world!";
     }
 }
