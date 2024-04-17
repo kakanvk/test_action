@@ -3,7 +3,7 @@ name: Build and Test C Project
 on:
   push:
     branches:
-      - main
+      - for-java
 
 jobs:
   build:

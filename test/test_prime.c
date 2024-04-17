@@ -38,5 +38,12 @@ int main() {
         printf("Result: Failed\n");
     }
 
+    printf("Test case: 53\n");
+    if (isPrime(59)) {
+        printf("Result: Passed\n");
+    } else {
+        printf("Result: Failed\n");
+    }
+
     return 0;
 }
