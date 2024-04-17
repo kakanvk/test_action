@@ -26,5 +26,5 @@ jobs:
 
       - name: Compile and run tests
         run: |
-          javac -cp src:testcases src/PrimeChecker.java testcases/PrimeCheckerTest.java
+          javac -cp src:testcases ./src/PrimeChecker.java ./testcases/PrimeCheckerTest.java
           java -cp src:testcases PrimeCheckerTest
