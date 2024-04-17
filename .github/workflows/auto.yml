@@ -18,5 +18,8 @@ jobs:
         with:
           java-version: '11'
 
+      - name: Set execute permission for script.sh
+        run: chmod +x ./autograde.sh
+
       - name: Run autograder
         run: ./autograde.sh
