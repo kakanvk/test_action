@@ -28,5 +28,6 @@ jobs:
 
       - name: Compile and run tests
         run: |
-          javac -cp ./src:testcases $GITHUB_WORKSPACE/src/PrimeChecker.java $GITHUB_WORKSPACE/testcases/PrimeCheckerTest.java
+          find $GITHUB_WORKSPACE -name "*.java" > sources.txt
+          javac -cp ./src:testcases @sources.txt
           java -cp ./src:testcases PrimeCheckerTest
