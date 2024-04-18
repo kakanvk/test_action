@@ -1,3 +1,5 @@
+package main.java;
+
 public class PrimeChecker {
     public static boolean isPrime(int n) {
         if (n <= 1) {

@@ -1,11 +1,9 @@
+package java;
+
 import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class PrimeCheckerTest {
-
-    public static void main(String[] args){
-        System.out.println("hello");
-    }
 
     @Test
     public void testIsPrime() {
@@ -24,3 +22,4 @@ public class PrimeCheckerTest {
         assertFalse(PrimeChecker.isPrime(12));
     }
 }
+
