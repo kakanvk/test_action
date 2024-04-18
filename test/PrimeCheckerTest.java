@@ -3,6 +3,10 @@ import org.junit.Test;
 
 public class PrimeCheckerTest {
 
+    public static void main(String[] args){
+        System.out.println("hello");
+    }
+
     @Test
     public void testIsPrime() {
         assertTrue(PrimeChecker.isPrime(2));
