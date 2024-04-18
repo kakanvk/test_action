@@ -15,24 +15,13 @@ jobs:
         with:
           ref: for-java
 
-      - name: Checkout test cases
-        uses: actions/checkout@v2
-        with:
-          repository: kakanvk/testcases
-          ref: main
-
       - name: Set up Java
         uses: actions/setup-java@v1
         with:
           java-version: '11'
 
-      - name: Set up JUnit
-        run: |
-          mkdir lib
-          curl -o lib/junit.jar https://repo1.maven.org/maven2/junit/junit/4.13.2/junit-4.13.2.jar
-
       - name: Compile and run tests
         run: |
           find $GITHUB_WORKSPACE -name "*.java" > sources.txt
-          javac -cp ./src:testcases @sources.txt
-          java -cp ./src:testcases:$GITHUB_WORKSPACE/src PrimeCheckerTest
+          javac -cp ./src:test @sources.txt
+          java -cp ./src:test:$GITHUB_WORKSPACE/test PrimeCheckerTest
