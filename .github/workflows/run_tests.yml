@@ -20,8 +20,13 @@ jobs:
         with:
           java-version: '11'
 
+      - name: Install JUnit
+        run: |
+          mkdir -p lib
+          wget -O lib/junit.jar https://repo1.maven.org/maven2/junit/junit/4.13.2/junit-4.13.2.jar
+
       - name: Compile and run tests
         run: |
           find $GITHUB_WORKSPACE -name "*.java" > sources.txt
-          javac -cp ./src:test @sources.txt
-          java -cp ./src:test:$GITHUB_WORKSPACE/test PrimeCheckerTest
+          javac -cp ./src:test:lib/junit.jar @sources.txt
+          java -cp ./src:test:lib/junit.jar PrimeCheckerTest
