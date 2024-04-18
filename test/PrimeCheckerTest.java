@@ -2,6 +2,10 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class PrimeCheckerTest {
+
+    public static void main(String[] args){
+    }
+
     @Test
     public void testIsPrime() {
         assertTrue(PrimeChecker.isPrime(2));
