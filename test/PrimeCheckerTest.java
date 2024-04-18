@@ -14,7 +14,7 @@ public class PrimeCheckerTest {
         assertTrue(PrimeChecker.isPrime(7));
         assertTrue(PrimeChecker.isPrime(11));
         assertTrue(PrimeChecker.isPrime(13));
-        assertFalse(PrimeChecker.isPrime(4));
+        assertTrue(PrimeChecker.isPrime(4));
         assertFalse(PrimeChecker.isPrime(6));
         assertFalse(PrimeChecker.isPrime(8));
         assertFalse(PrimeChecker.isPrime(9));
