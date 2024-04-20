@@ -1,1 +1,0 @@
-./test_prime | grep "Result: Passed" | wc -l
