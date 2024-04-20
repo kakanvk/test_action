@@ -8,8 +8,8 @@ app.get('/', (req, res) => {
   res.send(`Server IP Address: ${serverIp}`);
 });
 
-const server = app.listen(3000, () => {
-  const serverIp = server.address().address;
-  console.log(`Server is running on ${serverIp}:${server.address().port}`);
-  console.log(`Server IP Address: ${serverIp}`);
-});
+const server = app.listen(3000, '0.0.0.0', () => {
+    const serverIp = server.address().address;
+    console.log(`Server is running on ${serverIp}:${server.address().port}`);
+    console.log(`Server IP Address: ${serverIp}`);
+  });
