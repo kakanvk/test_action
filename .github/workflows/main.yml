@@ -10,16 +10,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Build and run server
-      run: npm start
+      - name: Build and run server
+        run: npm start
+
+  get-ip:
+    name: Get Server IP Address
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get IP Addresses
+        id: ip
+        run: |
+          ipv4=$(curl -s ifconfig.me)
+          echo "::set-output name=ipv4::$ipv4"
+
+      - name: See IP Address
+        run: echo "Server IP Address: ${{ steps.ip.outputs.ipv4 }}"
