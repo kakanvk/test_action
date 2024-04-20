@@ -25,7 +25,8 @@ jobs:
           echo "::set-output name=ipv4::$ipv4"
 
       - name: See IP Address
-        run: echo "Server IP Address: ${{ steps.ip.outputs.ipv4 }}"
+        run: |
+          echo "Server IP Address: ${{ steps.ip.outputs.ipv4 }}"
 
       - name: Install dependencies
         run: npm install
